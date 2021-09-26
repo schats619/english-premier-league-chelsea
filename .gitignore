@@ -1,29 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+/node_modules
 /.pnp
 .pnp.js
-/node_modules/.cache
-/node_modules/web-vitals
-/node_modules/webpack
-/node_modules/webpack-dev-middleware
-/node_modules/webpack-dev-server
-/node_modules/webpack-log
-/node_modules/webpack-manifest-plugin
-/node_modules/webpack-sources
-/node_modules/websocket-driver
-/node_modules/websocket-extensions
-/node_modules/whatwg-fetch
-/node_modules/whatwg-mimetype
-/node_modules/whatwg-encoding
-/node_modules/whatwg-url
-/node_modules/which
-/node_modules/which-module
-/node_modules/which-node_modules
-/node_modules/word-wrap
-/node_modules/workbox-background-sync
-/node_modules/workbox-broadcast-update
-/node_modules/workbox-build
 
 
 
