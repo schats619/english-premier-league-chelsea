@@ -21,6 +21,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import ViewListIcon from "@material-ui/icons/ViewList";
 import WidgetsIcon from "@material-ui/icons/Widgets";
+import TableViewIcon from "@material-ui/icons/TableChart";
+import PlayersIcon from "@material-ui/icons/Person";
 
 interface NavigationItemIconProps {
   name: any;
@@ -33,9 +35,11 @@ const NavigationItemIcon: React.FC<NavigationItemIconProps> = (
   const maxHeight = 24 - depth * 2;
   switch (name) {
     case "home":
-      return <SearchIcon style={{ maxHeight: maxHeight }} />;
-    case "players":
       return <HomeIcon style={{ maxHeight: maxHeight }} />;
+    case "players":
+      return <PlayersIcon style={{ maxHeight: maxHeight }} />;
+    case "pointstable":
+      return <TableViewIcon style={{ maxHeight: maxHeight }} />;
     // case "dashboard":
     //   return <DashboardIcon style={{ maxHeight: maxHeight }} />;
     // case "datacatalog":

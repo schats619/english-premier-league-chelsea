@@ -79,9 +79,6 @@ class Navigation extends Component<NavigationProps & RouteComponentProps> {
           {Routes.map((prop, key) => {
             return (
               <>
-                <ListItemIcon>
-                  <NavigationItemIcon name={prop.icon} depth={depth} />
-                </ListItemIcon>
                 <ListItem
                   button
                   component={Link}
@@ -90,6 +87,9 @@ class Navigation extends Component<NavigationProps & RouteComponentProps> {
                   key={key}
                   onClick={this.onHandleDrawerClose.bind(this)}
                 >
+                  <ListItemIcon>
+                    <NavigationItemIcon name={prop.icon} depth={depth} />
+                  </ListItemIcon>
                   <ListItemText primary={prop.name} />
                 </ListItem>
               </>
