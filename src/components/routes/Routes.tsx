@@ -1,14 +1,6 @@
-import React from "react";
 import Players from "../../pages/players/Players";
 import Home from "../../pages/home/Home";
 import PointsTable from "../../pages/points-table/PointsTable";
-// const Standings: React.FC = () => {
-//   return <h1>Standings</h1>;
-// };
-
-// const Teams: React.FC = () => {
-//   return <h1>Teams</h1>;
-// };
 
 const Routes = [
   {
@@ -26,6 +18,7 @@ const Routes = [
   {
     path: "/points-table",
     name: "Points Table",
+    icon: "pointstable",
     component: PointsTable,
   },
 ];
