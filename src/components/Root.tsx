@@ -42,7 +42,7 @@ class Root extends Component<RootProps, RootState> {
   constructor(props: RootProps) {
     super(props);
     this.state = {
-      navigationOpen: true,
+      navigationOpen: false,
       notificationsOpen: false,
     };
   }

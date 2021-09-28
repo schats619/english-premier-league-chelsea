@@ -1,6 +1,7 @@
 import { IntlShape, injectIntl } from "react-intl";
 import React, { Component } from "react";
 import { WithStyles, createStyles, withStyles } from "@material-ui/core/styles";
+import { Paper } from "@material-ui/core";
 
 const styles = () =>
   createStyles({
@@ -33,7 +34,11 @@ class Home extends Component<HomeProps, HomeState> {
     return (
       <div className={classes.content}>
         <div>
-          <h1>Home</h1>
+          <Paper>
+            <div>
+              <h1>Home</h1>
+            </div>
+          </Paper>
         </div>
       </div>
     );
