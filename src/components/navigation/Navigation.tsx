@@ -23,6 +23,7 @@ const styles = (theme: Theme) =>
       whiteSpace: "nowrap",
       width: drawerWidth,
       zIndex: 1000,
+      backgroundColor: "#555555",
       transition: theme.transitions.create("width", {
         easing: theme.transitions.easing.easeInOut,
         duration: theme.transitions.duration.shortest,
@@ -66,6 +67,7 @@ class Navigation extends Component<NavigationProps & RouteComponentProps> {
     };
     return (
       <Drawer
+        variant="persistent"
         classes={{
           paper: `${classes.drawerPaper} ${
             open ? null : classes.drawerPaperClose
@@ -82,7 +84,7 @@ class Navigation extends Component<NavigationProps & RouteComponentProps> {
                 <ListItem
                   button
                   component={Link}
-                  selected={activeRoute(prop.path)}
+                  // selected={activeRoute(prop.path)}
                   to={prop.path}
                   key={key}
                   onClick={this.onHandleDrawerClose.bind(this)}
@@ -90,7 +92,7 @@ class Navigation extends Component<NavigationProps & RouteComponentProps> {
                   <ListItemIcon>
                     <NavigationItemIcon name={prop.icon} depth={depth} />
                   </ListItemIcon>
-                  <ListItemText primary={prop.name} />
+                  <ListItemText primary={prop.name} style={{ color: "#fff" }} />
                 </ListItem>
               </>
             );

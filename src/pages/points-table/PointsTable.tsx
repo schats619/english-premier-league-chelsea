@@ -1,6 +1,7 @@
 import { IntlShape, injectIntl } from "react-intl";
 import React, { Component } from "react";
 import { WithStyles, createStyles, withStyles } from "@material-ui/core/styles";
+import { IconButton, Typography } from "@material-ui/core";
 
 const styles = () =>
   createStyles({
@@ -29,12 +30,15 @@ class PointsTable extends Component<PointsTableProps, PointsTableState> {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
     return (
       <div className={classes.content}>
         <div>
-          <h1>PointsTable</h1>
+          <Typography variant="h4">
+            {intl.formatMessage({ id: "points.table.header" })}
+          </Typography>
         </div>
+        <div></div>
       </div>
     );
   }

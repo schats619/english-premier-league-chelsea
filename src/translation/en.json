@@ -1,8 +1,14 @@
 {
-    "taskbar.title" : "This is a test for taskbar",
-    "home.title": "This is a test for home",
-    "epl.avatar.name": "English Premier League",
-    "copyright.message": "Copyright © ",
-    "navigation.item.home": "Home",
-    "navigation.item.players": "Players"
+  "taskbar.title": "This is a test for taskbar",
+  "home.title": "This is a test for home",
+  "epl.avatar.name": "Chelsea Football Club",
+  "copyright.message": "Copyright © ",
+  "navigation.item.home": "Home",
+  "navigation.item.players": "Players",
+  "header.home": "Home",
+  "header.players": "Squad",
+  "header.matches": "Matches",
+  "properties.panel.heading.romelulukaku": "Romelu Lukaku",
+  "points.table.header": "Points Table",
+  "home.description": "Welcome to Chelsea Football club home page. Home of the blues. This website contains all the players information and it's statistics."
 }
