@@ -1,6 +1,7 @@
 import Players from "../../pages/players/Players";
 import Home from "../../pages/home/Home";
 import PointsTable from "../../pages/points-table/PointsTable";
+import Matches from "../../pages/matches/Matches";
 
 const Routes = [
   {
@@ -20,6 +21,12 @@ const Routes = [
     name: "Points Table",
     icon: "pointstable",
     component: PointsTable,
+  },
+  {
+    path: "/matches",
+    name: "Matches",
+    icon: "matches",
+    component: Matches,
   },
 ];
 

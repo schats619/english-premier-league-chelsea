@@ -23,6 +23,7 @@ import ViewListIcon from "@material-ui/icons/ViewList";
 import WidgetsIcon from "@material-ui/icons/Widgets";
 import TableViewIcon from "@material-ui/icons/TableChart";
 import PlayersIcon from "@material-ui/icons/Person";
+import MatchesIcon from "@material-ui/icons/Timeline";
 
 interface NavigationItemIconProps {
   name: any;
@@ -35,13 +36,15 @@ const NavigationItemIcon: React.FC<NavigationItemIconProps> = (
   const maxHeight = 24 - depth * 2;
   switch (name) {
     case "home":
-      return <HomeIcon style={{ maxHeight: maxHeight }} />;
+      return <HomeIcon style={{ maxHeight: maxHeight, color: "#fff" }} />;
     case "players":
-      return <PlayersIcon style={{ maxHeight: maxHeight }} />;
+      return <PlayersIcon style={{ maxHeight: maxHeight, color: "#fff" }} />;
     case "pointstable":
-      return <TableViewIcon style={{ maxHeight: maxHeight }} />;
+      return <TableViewIcon style={{ maxHeight: maxHeight, color: "#fff" }} />;
+    case "matches":
+      return <MatchesIcon style={{ maxHeight: maxHeight, color: "#fff" }} />;
     default:
-      return <WidgetsIcon style={{ maxHeight: maxHeight }} />;
+      return <WidgetsIcon style={{ maxHeight: maxHeight, color: "#fff" }} />;
   }
 };
 export default NavigationItemIcon;

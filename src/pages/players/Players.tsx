@@ -1,6 +1,8 @@
 import { IntlShape, injectIntl } from "react-intl";
 import React, { Component } from "react";
 import { WithStyles, createStyles, withStyles } from "@material-ui/core/styles";
+import PlayerCard from "../../components/player-card/PlayerCard";
+import { Paper, Typography } from "@mui/material";
 
 const styles = () =>
   createStyles({
@@ -8,10 +10,15 @@ const styles = () =>
       flexGrow: 1,
       width: "100%",
     },
+    header: {
+      position: "relative",
+      left: 32,
+    },
   });
 interface PlayersProps extends WithStyles<typeof styles> {
   intl: IntlShape;
   userId: string;
+  model?: any;
 }
 
 type PlayersState = {
@@ -29,12 +36,15 @@ class Players extends Component<PlayersProps, PlayersState> {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, intl, model } = this.props;
     return (
       <div className={classes.content}>
-        <div>
-          <h1>Players</h1>
+        <div className={classes.header}>
+          <Typography variant="h5" component="div" gutterBottom>
+            {intl.formatMessage({ id: "header.players" })}
+          </Typography>
         </div>
+        <PlayerCard model={model} />
       </div>
     );
   }

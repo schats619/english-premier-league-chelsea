@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import { deepOrange } from "@material-ui/core/colors";
 import { Typography } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -65,15 +66,16 @@ class Taskbar extends Component<TaskbarProps, TaskbarState> {
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <IconButton onClick={onEPLIconClick} color="inherit">
-            <Tooltip
-              title={intl.formatMessage({ id: "epl.avatar.name" })}
-              placement="bottom-start"
-            >
-              <Typography variant="h5" className={classes.title}>
-                {intl.formatMessage({ id: "epl.avatar.name" })}
-              </Typography>
-            </Tooltip>
+            <MenuIcon />
           </IconButton>
+          <Tooltip
+            title={intl.formatMessage({ id: "epl.avatar.name" })}
+            placement="bottom-start"
+          >
+            <Typography variant="h5" className={classes.title}>
+              {intl.formatMessage({ id: "epl.avatar.name" })}
+            </Typography>
+          </Tooltip>
         </Toolbar>
       </AppBar>
     );

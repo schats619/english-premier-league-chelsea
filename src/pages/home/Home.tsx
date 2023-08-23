@@ -1,13 +1,24 @@
 import { IntlShape, injectIntl } from "react-intl";
 import React, { Component } from "react";
 import { WithStyles, createStyles, withStyles } from "@material-ui/core/styles";
-import { Paper } from "@material-ui/core";
+import { Paper, Tooltip, Typography } from "@material-ui/core";
 
 const styles = () =>
   createStyles({
     content: {
       flexGrow: 1,
       width: "100%",
+    },
+    header: {
+      float: "left",
+      margin: 5,
+    },
+    innerContainer: {
+      height: "100%",
+      width: "100%",
+      top: 102,
+      left: 10,
+      position: "absolute",
     },
   });
 interface HomeProps extends WithStyles<typeof styles> {
@@ -30,13 +41,27 @@ class Home extends Component<HomeProps, HomeState> {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
     return (
       <div className={classes.content}>
         <div>
           <Paper>
             <div>
-              <h1>Home</h1>
+              <Tooltip
+                title={intl.formatMessage({ id: "epl.avatar.name" })}
+                placement="bottom-start"
+              >
+                <Typography variant="h5" className={classes.header}>
+                  {intl.formatMessage({ id: "header.home" })}
+                </Typography>
+              </Tooltip>
+            </div>
+            <div className={classes.innerContainer}>
+              <Paper elevation={1}>
+                <Typography variant="h6">
+                  {intl.formatMessage({ id: "home.description" })}
+                </Typography>
+              </Paper>
             </div>
           </Paper>
         </div>
